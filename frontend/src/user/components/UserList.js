@@ -1,11 +1,18 @@
 import React from 'react';
 import UserItem from './UserItem'
 
+import './UserList.css'
+
 const UserList = (prop) => {
+  if (prop.items.length === 0) {
+    return (
+      <h2>No users found.</h2>
+    )
+  };
+
   return (
-    <div>
-      {prop.items.map(user => {
-        return (
+    <ul className='users-list'>
+      {prop.items.map(user => (
           <UserItem
           key={user.id}
           id={user.id}
@@ -14,8 +21,8 @@ const UserList = (prop) => {
           placeCount={user.places}
           />
         )
-      })}
-    </div>
+      )}
+    </ul>
   )
 }
 
