@@ -16,13 +16,11 @@ function App() {
             <Users />
           </Route>
 
-
-
           <Route path='/places/new'>
             <NewPlace />
           </Route>
 
-          <Route path='/:userid/places' exact>
+          <Route path='/:userId/places' exact>
             <UserPlaces />
           </Route>
 
