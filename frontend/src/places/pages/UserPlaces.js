@@ -29,7 +29,7 @@ const UserPlaces = () => {
       },
       creator: 'u2'
     }
-  ]
+  ];
 
   const userId = useParams().userId;
   const loadedPlaces = PLACES.filter(place => (
