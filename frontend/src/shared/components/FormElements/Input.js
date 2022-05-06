@@ -40,8 +40,9 @@ const Input = (props) => {
   const {value, isValid} = inputState;
 
   useEffect(() => {
+    console.log('id', id,'value', value, 'isValid', isValid)
     onInput(id, value, isValid)
-  }, [id, value, isValid, onInput]);
+  }, [id, value, isValid, onInput]); // we also put onInput here because we get it from outside(props)
 
   const element = props.element === 'input'?
   <input
@@ -50,6 +51,7 @@ const Input = (props) => {
     id={props.id}
     value={inputState.value}
     onChange={changeHandler}
+    //onBlur is to NOT show error before losing focus
     onBlur={blurHandler}
     ></input> :
   <textarea

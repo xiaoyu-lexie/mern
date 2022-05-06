@@ -35,6 +35,8 @@ const UserPlaces = () => {
   const loadedPlaces = PLACES.filter(place => (
     place.creator === userId
   ))
+
+
   return <PlaceList items={loadedPlaces} key={userId}/>
 };
 

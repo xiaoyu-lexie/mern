@@ -29,8 +29,6 @@ function App() {
             <UserPlaces />
           </Route>
 
-
-
           <Redirect to='/' />
         </Switch>
       </main>

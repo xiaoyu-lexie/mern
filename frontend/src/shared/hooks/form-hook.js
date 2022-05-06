@@ -30,6 +30,7 @@ export const useForm = (initialInputs, initialFormValidity) => {
     isValid: initialFormValidity
   });
 
+  // this is to manage overall validity and values of the entire form
   const inputHandler = useCallback((id, value, isValid) => {
     dispatch({
       type: 'INPUT_CHANGE',
