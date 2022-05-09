@@ -39,8 +39,8 @@ const Input = (props) => {
   const {id, onInput} = props;
   const {value, isValid} = inputState;
 
+  // the value and isValid has been updated before running onInput function, since useEffect is invoked so late.
   useEffect(() => {
-    console.log('id', id,'value', value, 'isValid', isValid)
     onInput(id, value, isValid)
   }, [id, value, isValid, onInput]); // we also put onInput here because we get it from outside(props)
 
